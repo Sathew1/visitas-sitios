@@ -1,0 +1,455 @@
+{
+    "semana": 43,
+    "inicio": {
+        "procomit": {
+            "Site 3 VHF": [
+                {
+                    "id": "21a69d76-663d-421b-929a-76328f53bfb0",
+                    "text": "Cable sin protección de flexible",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/bbccc12872e3bc0e531b87b801ccf399.jpg",
+                    "comment": ""
+                }
+            ],
+            "Sitio Principal": [
+                {
+                    "id": "c38fea74-7df0-4f6f-b25b-21a1dadf8d81",
+                    "text": "Pintura desgastada en torre",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/95d14400697fa6aeeae1f0caaa73765b.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "39d4f454-3e3e-4727-b5e8-5eed663735d6",
+                    "text": "Cables sin orden en paneles",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/84386059e96f0c1383061a2485546bdd.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "31ed04b9-e317-4f7e-b8d8-28244ac4b808",
+                    "text": "Cables sin orden en shelter",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/6690aea541c21e5e9573bb82e643583d.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "1b046ce9-ad70-4e6e-9a9d-606590f6add8",
+                    "text": "Torre sin baliza",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/d37b37124060326cbed982bde9e41e3c.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "7cd8d75c-2e3d-4436-ad95-e9cad91c3e80",
+                    "text": "Shelter agujereado por golpes de piedras - Reparado de manera provisoria",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/82c788482eeed2fab9da0b259bfa9bd0.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "c411eda5-3e7d-41ff-9231-caea1de327e2",
+                    "text": "Extintor sobredimensionado",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/f68ffc4cb62d8f89d1718f7d2e20b9d6.jpg",
+                    "comment": ""
+                }
+            ],
+            "Site 1 (mina)": [
+                {
+                    "id": "83e8e7f3-aa7a-43df-aa48-b04797b4c590",
+                    "text": "Cables en desorden",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/55e83a2a57dac4aa04bd364231e5a740.jpg",
+                    "comment": ""
+                }
+            ],
+            "Botadero norte": [
+                {
+                    "id": "3eda0134-17b8-4f8c-b1ac-7b489ecdd4e0",
+                    "text": "Panel quebrado esquina izquierda inferior funcionando",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/851730259c02a559d76df5c3874d8b6f.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "863a9b04-0181-41bf-8df4-c68597c1b589",
+                    "text": "Paneles sucios",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/b18f1a61239fa293119a1fe7d10950aa.jpg",
+                    "comment": ""
+                }
+            ],
+            "_siteStatus": {
+                "Site 3 VHF": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Sitio Principal": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Site 1 (mina)": {
+                    "notVisited": true,
+                    "reason": "Personal ocupado"
+                },
+                "Botadero norte": {
+                    "notVisited": true,
+                    "reason": "Personal ocupado"
+                }
+            }
+        },
+        "pascom": {
+            "Torre nueva (CGF)": [
+                {
+                    "id": "1d4fb041-15d4-480b-9ec5-f012cddee3c9",
+                    "text": "Electrodo malla a tierra magneto-activo se encuentra quebrado (Barra química)",
+                    "status": "solved",
+                    "photo": "./fotos/inicio/65f9f156dcdf1eebe394fcdb4a06f3e8.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "327c0d2c-cec4-4e76-a765-723507c41425",
+                    "text": "Anclaje de GE no asegurado mediante tornillos",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/3fa22451e4900859d42dd917bbc75de6.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "1876c579-2720-4668-9211-80045927b1b0",
+                    "text": "Tubería cable para monitoreo con falta de sellado, puede filtrar agua",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/1c2ce6d7d688c35bb94c461cf4691f53.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "bc234b44-dc45-465d-bbda-daebfd0b51c7",
+                    "text": "abrazadera de sujeción del cable de bajada del pararrayos suelta",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/6ba0acc099375778ebedf0de47619fb5.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "42f963a8-ec02-4c87-9544-439e6052697d",
+                    "text": "Abolladura en toma de aire shelter",
+                    "status": "solved",
+                    "photo": "./fotos/inicio/5aee829473551385427caf7bd8510280.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "16308d70-09a1-4103-b294-3da968d05e5c",
+                    "text": "Extintor sobre-dimensionado y vencido",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/bf8282635712df197ef97be796611c99.jpg",
+                    "comment": "fireproof encargado"
+                }
+            ],
+            "Sitio Campamento": [
+                {
+                    "id": "3416d1d9-6a9c-4201-8b28-001b091c4b81",
+                    "text": "Anclaje de GE no asegurado mediante tornillos y tornillos doblados",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/e6da481294df6435c320f357c8b420b6.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "3bae2e66-970f-4182-957b-d5dca8e2ff9f",
+                    "text": "Puerta de shelter puede golpear cierre perimetral, se sugiere cadena a puerta",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/6dd4d022065dfabc2f09bdf26a3ef9c7.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "0735c2ec-cef6-482d-b87e-ef2469639b68",
+                    "text": "Materia acopiado en sitio",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/44d0fc0dc4bc6c110043de2e743da7bc.jpg",
+                    "comment": "responsable: MER"
+                },
+                {
+                    "id": "ea909564-89bf-486e-9bc7-827585809a28",
+                    "text": "Condición subestándar de orden en shelter",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/0ba0b2a374698d8da773d716b7290dbb.jpg",
+                    "comment": ""
+                }
+            ],
+            "_siteStatus": {
+                "Torre nueva (CGF)": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Sitio Campamento": {
+                    "notVisited": false,
+                    "reason": ""
+                }
+            }
+        },
+        "goldfields": {
+            "CGF": [
+                {
+                    "id": "ebdd220c-e817-419d-a167-61c075a7d349",
+                    "text": "Se debe cambiar el extintor (sobredimensionado) y vencido",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/26866414d65166028e1aac124f7aed23.jpg",
+                    "comment": "Fireproof encargado"
+                },
+                {
+                    "id": "faa24ea4-95db-495e-be65-94664c7b7e2c",
+                    "text": "Pendiente ordenamiento de cables en shelter",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/fb835f47ec4b38d3d81c1423b21fdae8.jpg",
+                    "comment": "varias empresas involucradas"
+                },
+                {
+                    "id": "b10efe74-2e37-44a9-949f-53aa88d197b5",
+                    "text": "Se debe instalar baliza en torre",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/b218303e9eecd9e9e98c1401659b529f.jpg",
+                    "comment": "A la espera de mejora de vientos"
+                },
+                {
+                    "id": "3b9f4271-8e32-4168-87ac-ad1fa19cb17d",
+                    "text": "Escalera a shelter falta un peldaño, muy alta",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/5925a16eca2cc695c0327c24b4b31d91.jpg",
+                    "comment": "Indicado por brigada"
+                },
+                {
+                    "id": "960b3681-ddea-45be-acb1-da344d531bbd",
+                    "text": "Cable a tierra en paneles no se encuentra soterrado",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/1d87e8e80ad240ee250168cb46f12ed9.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "0be683dd-c511-4f11-9969-34eab3ad7052",
+                    "text": "Cables a tierra de torre (soterrados en caja) se encuentran sulfatados",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/ffcea3f656859dfd9c3dfbb911dad5de.jpg",
+                    "comment": "evaluar con empresa externa"
+                },
+                {
+                    "id": "cba59d19-efe1-4331-bfe9-8e0922a17b44",
+                    "text": "Cable suelto en torre, 5to tramo",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/9312c2dcdb4cce93d4c5245d50d508b1.jpg",
+                    "comment": "A la espera de mejora de vientos"
+                },
+                {
+                    "id": "cd0e325e-31e3-48ad-8098-f3aaea3c193a",
+                    "text": "Excavacion costado de shelter",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/7b736392eb88a9e5e712d6953d2d5760.jpg",
+                    "comment": "Realizado por MER"
+                },
+                {
+                    "id": "47fb136e-6910-4c05-b014-cb8f2c18b46e",
+                    "text": "Acopio de material MER",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/251baa23fe9b5c248606a05f5f9ba753.jpg",
+                    "comment": "Pertenece a MER"
+                },
+                {
+                    "id": "2d5f7f02-06e0-4148-9501-88da258219fd",
+                    "text": "Tubería y restos de PVC de trabajo anterior realizados encontrados junto a shelter.",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/d0097ea564b3be908fdf3732468558fb.jpg",
+                    "comment": "Pertenece a MER"
+                }
+            ],
+            "CAP Site 4": [
+                {
+                    "id": "4e0b10f8-2eab-4868-831e-e5d5787b7f21",
+                    "text": "Anclaje de GE no asegurado mediante tornillos",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/5062316ce493e1b709d06f718484c6f2.jpg",
+                    "comment": "Pendiente por claro"
+                },
+                {
+                    "id": "d72ceb29-add6-4eed-8822-4a488039bc2a",
+                    "text": "Se debe cambiar el extintor shelter sobredimensionado y vencido",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/26ac77b9acef5672122ae56c74f74f7d.jpg",
+                    "comment": "Fireproof encargado"
+                },
+                {
+                    "id": "3cb89185-1c6b-42eb-bdb9-92ee5a71d22c",
+                    "text": "Ordenamiento deficiente de cables en rack",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/1bee9826887daeae8c22acc15298a837.jpg",
+                    "comment": "varias empresas involucradas"
+                },
+                {
+                    "id": "fe4f6cf3-1bc3-485c-b5e5-46ffb0cc6d93",
+                    "text": "Solo un generador funcionando",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/93d603b95caf25283eac9c00198cd9db.jpg",
+                    "comment": "generador de la foto, fuera de servicio"
+                },
+                {
+                    "id": "24ea440b-cd56-48a9-b1ed-01e7af0d6fa8",
+                    "text": "Generador con daño en lata exterior",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/3ce96a0e250aebb582117e3e36896e12.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "0be670dd-ea4f-4aff-8142-6bf684022e46",
+                    "text": "Un GE con fugas",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/b065fa885452e7586a53bba9f7bd01e2.jpg",
+                    "comment": "Fuera de servicio"
+                },
+                {
+                    "id": "815629aa-43d8-4528-b29b-29c9bc65b5e2",
+                    "text": "Sitio pantanoso",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/69316be45edcf9c44d2b72c458aa2639.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "c9d3bbd0-4947-4f26-b897-34f771ffab4b",
+                    "text": "Cerco desacoplado. Abrazaderas sueltas en poste, malla sin fijación.",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/525b6bac61a36b1f0db393ca57f897de.jpg",
+                    "comment": ""
+                }
+            ],
+            "Site 3": [
+                {
+                    "id": "1c5dd51a-9daf-46e9-87ee-667e8b73c8fd",
+                    "text": "Anclaje de GE no asegurado mediante tornillos",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/8833bf6152773960b9a52d2d42aa635e.jpg",
+                    "comment": "Pendiente por claro"
+                },
+                {
+                    "id": "02bb6f6f-6b30-4581-a82f-54d10ef836f3",
+                    "text": "Cable fuera de norma bajo torre (Carro mina OT)",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/2e6ca759a3de54f8029de108ccbbe06d.jpg",
+                    "comment": "Se reenvía correo de seguimiento en septiembre, sin novedades."
+                },
+                {
+                    "id": "d6e4f30b-0827-418c-94fc-fb224f4d6ba0",
+                    "text": "Se debe reparar/instalar baliza",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/1ae2ad0c996c974b5d53ddaa4b99f5f0.jpg",
+                    "comment": "A la espera de mejora de vientos"
+                },
+                {
+                    "id": "5f6519fb-0c76-4ff1-ace0-cb3e80b8bcdc",
+                    "text": "Baterías infladas en el sitio y con visibilidad de ácido derramado",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/fd25de1e9d64fa2b7ab220064d61705a.jpg",
+                    "comment": "Pendiente de retiro"
+                },
+                {
+                    "id": "82595bb7-80e4-4b3f-8adc-e1512001a6d9",
+                    "text": "Goma puerta de shelter quemado, roto",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/8bdf09ae834e776ea16b43e8cc82f717.jpg",
+                    "comment": "Averiguar como proceder"
+                },
+                {
+                    "id": "d01810dd-9af9-4532-be7a-0405c2fdd7a3",
+                    "text": "Acopio de material después de instalación de cubre generador",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/2172df1dc2fb2805a1de73215aae2649.jpg",
+                    "comment": "Retirado por Pascom"
+                }
+            ],
+            "Geología": [
+                {
+                    "id": "5ba69a07-8d24-4a65-b31d-faf390a5cb27",
+                    "text": "Se debe cambiar el extintor (sobredimensionado) y vencido",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/150b09277378eddce047a993ef477279.jpg",
+                    "comment": "Fireproof encargado"
+                }
+            ],
+            "Site 7": [
+                {
+                    "id": "a1c5b645-4364-4cf3-9d13-34a3b803ce70",
+                    "text": "10 baterías con grietas, quebradas y con ácido cristalizado en bandeja",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/615c2ef04477fc1a529b47fe293eeeb3.jpg",
+                    "comment": "Pendiente de retiro"
+                },
+                {
+                    "id": "0dd0ac43-8e8f-46d1-bf2e-a0a3a73fa841",
+                    "text": "Goma puerta de shelter quemado, roto",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/0373c0fbc0791ee8ae018dd3eeeb323f.jpg",
+                    "comment": ""
+                },
+                {
+                    "id": "a3e36cac-cdc6-4e51-bf57-2913a2c0851a",
+                    "text": "Abrazadera de sujeción del cable de bajada del pararrayos suelta",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/e08a1c9735e571082aa37b435d7d4d7f.jpg",
+                    "comment": "A la espera de mejora de vientos"
+                },
+                {
+                    "id": "e2756b16-9ed4-4b6f-bee4-58349f14a549",
+                    "text": "Fuga de ácido de batea a piso. Batea con posible perforación. Baterías reventadas preexistentes.",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/25a36bb95275a6800245bb9c25c29ca4.jpg",
+                    "comment": "",
+                    "openedAt": "2026-10-26"
+                }
+            ],
+            "Área Mina - Site 1": [
+                {
+                    "text": "Regularizar abrazadera de tubos (son más grandes que los tubos)",
+                    "status": "pending",
+                    "photo": null
+                },
+                {
+                    "text": "Shelter sucio y desordenado",
+                    "status": "pending",
+                    "photo": null
+                }
+            ],
+            "_siteStatus": {
+                "CGF": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "CAP Site 4": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Site 3": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Geología": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Site 7": {
+                    "notVisited": false,
+                    "reason": ""
+                },
+                "Área Mina – Site 1": {
+                    "notVisited": true,
+                    "reason": "Personal ocupado"
+                }
+            },
+            "Área Mina – Site 1": [
+                {
+                    "id": "f8cc9fbe-baf8-4932-944a-da666741696c",
+                    "text": "Paneles en shelter, y suciedad",
+                    "status": "pending",
+                    "photo": "./fotos/inicio/fa6f772ec74718dc37f30215416d0353.jpg",
+                    "comment": ""
+                }
+            ]
+        }
+    },
+    "final": [],
+    "_finalSeeded": true,
+    "_finalSeededVersion": 2
+}
