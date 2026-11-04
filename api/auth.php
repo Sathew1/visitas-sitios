@@ -109,3 +109,19 @@ function rv_require_editor()
         exit;
     }
 }
+function rv_require_auth()
+{
+    $context = rv_auth_context();
+
+    if (!$context['authenticated']) {
+        http_response_code(401);
+        header('Content-Type: application/json; charset=utf-8');
+
+        echo json_encode([
+            'success' => false,
+            'message' => 'Debes iniciar sesión.'
+        ], JSON_UNESCAPED_UNICODE);
+
+        exit;
+    }
+}
