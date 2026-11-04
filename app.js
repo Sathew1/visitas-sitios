@@ -1503,24 +1503,37 @@ if (loginForm) {
   });
 }
 
+
 const logoutButton = document.getElementById("logoutButton");
+
 if (logoutButton) {
   logoutButton.addEventListener("click", async () => {
+    logoutButton.disabled = true;
+    logoutButton.textContent = "Cerrando sesión...";
+
     try {
-      await fetch(LOGOUT_URL, { method: "POST" });
+      const response = await fetch(LOGOUT_URL, {
+        method: "POST",
+        cache: "no-store",
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("No se pudo cerrar la sesión.");
+      }
+
+      window.location.replace("./index.php");
+
     } catch (error) {
       console.error(error);
+      logoutButton.disabled = false;
+      logoutButton.textContent = "Cerrar sesión";
+      alert("No se pudo cerrar la sesión. Intenta nuevamente.");
     }
-
-    authState = {
-      authenticated: false,
-      canEdit: false,
-    };
-
-    await loadAuthStatus();
-    render();
   });
 }
+
 
 document.querySelectorAll(".visit-tab").forEach((button) => {
   button.addEventListener("click", () => {
