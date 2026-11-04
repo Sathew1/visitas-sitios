@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/api/auth.php';
+
+rv_require_auth();
+?>
 <!doctype html>
 <html lang="es">
   <head>
