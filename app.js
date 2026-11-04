@@ -1527,12 +1527,14 @@ if (logoutButton) {
 
     } catch (error) {
       console.error(error);
+      alert("No se pudo cerrar la sesión.");
+
       logoutButton.disabled = false;
       logoutButton.textContent = "Cerrar sesión";
-      alert("No se pudo cerrar la sesión. Intenta nuevamente.");
     }
   });
 }
+
 
 
 document.querySelectorAll(".visit-tab").forEach((button) => {
