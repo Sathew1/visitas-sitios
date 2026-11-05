@@ -535,8 +535,10 @@ function renderObservations(card, site, observations) {
     dateLabel.append(openedDateInput);
 
     const daysLabel = document.createElement("span");
+
     const endDate =
       observation.status === "solved" ? observation.closedAt : todayISO();
+
     const days = daysBetweenISO(observation.openedAt, endDate);
 
     daysLabel.textContent =
@@ -549,6 +551,29 @@ function renderObservations(card, site, observations) {
           : `Días abierta: ${days}`;
 
     tracking.append(dateLabel, daysLabel);
+
+    if (observation.status === "solved") {
+      const closedDateInput = document.createElement("input");
+      closedDateInput.type = "date";
+      closedDateInput.value = observation.closedAt || "";
+      closedDateInput.max = todayISO();
+      closedDateInput.disabled = !authState.canEdit;
+      closedDateInput.setAttribute("aria-label", "Fecha de cierre");
+
+      const closedDateLabel = document.createElement("label");
+      closedDateLabel.textContent = "Fecha de cierre: ";
+      closedDateLabel.append(closedDateInput);
+
+      tracking.append(closedDateLabel);
+    }
+    closedDateInput.addEventListener("change", async () => {
+      if (!authState.canEdit) return;
+
+      observation.closedAt = closedDateInput.value || null;
+
+      await saveData();
+      render();
+    });
 
     openedDateInput.addEventListener("change", async () => {
       if (!authState.canEdit) return;
@@ -647,7 +672,10 @@ function renderObservations(card, site, observations) {
 
       if (observation.status === "pending") {
         observation.status = "solved";
-        observation.closedAt = todayISO();
+
+        if (!observation.closedAt) {
+          observation.closedAt = todayISO();
+        }
       } else {
         observation.status = "pending";
         observation.closedAt = null;

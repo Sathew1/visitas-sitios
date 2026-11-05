@@ -1,8 +1,14 @@
+
 <?php
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
+
 require_once __DIR__ . '/api/auth.php';
 
 rv_require_auth();
 ?>
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -36,25 +42,7 @@ rv_require_auth();
 
     <main class="container">
       <section class="login-panel">
-        <form id="loginForm">
-          <input
-            id="loginUsername"
-            name="username"
-            type="text"
-            placeholder="Usuario"
-            autocomplete="username"
-            required
-          />
-          <input
-            id="loginPassword"
-            name="password"
-            type="password"
-            placeholder="Clave"
-            autocomplete="current-password"
-            required
-          />
-          <button class="button primary" type="submit">Iniciar sesión</button>
-        </form>
+        
 
         <div id="loggedInPanel" hidden>
           <span id="authInfo"></span>
@@ -100,6 +88,6 @@ rv_require_auth();
       <img id="modalImage" src="" alt="Foto de la observación" />
     </div>
 
-    <script src="./app.js?v=10" defer></script>
+    <script src="./app.js?v=13" defer></script>
   </body>
 </html>
