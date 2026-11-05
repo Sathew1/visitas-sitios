@@ -134,6 +134,8 @@ function normalizeData(data) {
             status: item?.status === "solved" ? "solved" : "pending",
             photo: item?.photo || null,
             comment: String(item?.comment || ""),
+            openedAt: item?.openedAt || "",
+            closedAt: item?.closedAt || null,
           };
         });
 
@@ -694,6 +696,8 @@ function renderObservations(card, site, observations) {
       status: "pending",
       photo: null,
       comment: "",
+      openedAt: todayISO(),
+      closedAt: null,
     });
 
     render();
@@ -1503,7 +1507,6 @@ if (loginForm) {
   });
 }
 
-
 const logoutButton = document.getElementById("logoutButton");
 
 if (logoutButton) {
@@ -1524,7 +1527,6 @@ if (logoutButton) {
       }
 
       window.location.replace("./index.php");
-
     } catch (error) {
       console.error(error);
       alert("No se pudo cerrar la sesión.");
@@ -1534,8 +1536,6 @@ if (logoutButton) {
     }
   });
 }
-
-
 
 document.querySelectorAll(".visit-tab").forEach((button) => {
   button.addEventListener("click", () => {
