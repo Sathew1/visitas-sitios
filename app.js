@@ -125,6 +125,8 @@ function normalizeData(data) {
               status: "pending",
               photo: null,
               comment: "",
+              openedAt: "",
+              closedAt: null,
             };
           }
 
@@ -473,6 +475,7 @@ function render() {
   content.replaceChildren(panel);
   applyEditAccess();
 }
+
 function todayISO() {
   const now = new Date();
   const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
@@ -520,6 +523,8 @@ function renderObservations(card, site, observations) {
     status.className = "observation-status";
     status.textContent =
       observation.status === "solved" ? "Solucionado" : "Pendiente";
+
+    // Fecha de apertura
     const openedDateInput = document.createElement("input");
     openedDateInput.type = "date";
     openedDateInput.value = observation.openedAt || "";
@@ -535,7 +540,6 @@ function renderObservations(card, site, observations) {
     dateLabel.append(openedDateInput);
 
     const daysLabel = document.createElement("span");
-
     const endDate =
       observation.status === "solved" ? observation.closedAt : todayISO();
 
@@ -552,7 +556,41 @@ function renderObservations(card, site, observations) {
 
     tracking.append(dateLabel, daysLabel);
 
+    openedDateInput.addEventListener("change", async () => {
+      if (!authState.canEdit) return;
+
+      observation.openedAt = openedDateInput.value;
+      await saveData();
+      render();
+    });
+
+    // Fecha de cierre: solo se muestra cuando está solucionada.
     if (observation.status === "solved") {
+      const closedDateInput = document.createElement("input");
+      closedDateInput.type = "date";
+      closedDateInput.value = observation.closedAt || "";
+      closedDateInput.max = todayISO();
+      closedDateInput.disabled = !authState.canEdit;
+      closedDateInput.setAttribute("aria-label", "Fecha de cierre");
+
+      const closedDateLabel = document.createElement("label");
+      closedDateLabel.textContent = "Fecha de cierre: ";
+      closedDateLabel.append(closedDateInput);
+
+      tracking.append(closedDateLabel);
+
+      closedDateInput.addEventListener("change", async () => {
+        if (!authState.canEdit) return;
+
+        observation.closedAt = closedDateInput.value || null;
+        await saveData();
+        render();
+      });
+    }
+
+    description.append(text, status, tracking);
+
+    // Comentario: visible tanto en observaciones pendientes como solucionadas.
     const commentBox = document.createElement("textarea");
     commentBox.className = "comment-box";
     commentBox.rows = 2;
@@ -564,12 +602,12 @@ function renderObservations(card, site, observations) {
 
     commentBox.addEventListener("change", async () => {
       if (!authState.canEdit) return;
+
       observation.comment = commentBox.value.trim();
       await saveData();
     });
 
-    description.append(text, status, tracking);
-
+    // Acciones y fotografías
     const actions = document.createElement("div");
     actions.className = "observation-actions";
 
@@ -601,6 +639,7 @@ function renderObservations(card, site, observations) {
       : "Agregar foto";
     photoButton.addEventListener("click", () => photoInput.click());
 
+    // Editar observación
     const editButton = document.createElement("button");
     editButton.type = "button";
     editButton.className = "button";
@@ -609,6 +648,7 @@ function renderObservations(card, site, observations) {
       showEditForm(row, observation);
     });
 
+    // Eliminar observación
     const deleteButton = document.createElement("button");
     deleteButton.type = "button";
     deleteButton.className = "button danger";
@@ -629,6 +669,7 @@ function renderObservations(card, site, observations) {
       await saveData();
     });
 
+    // Cambiar estado
     const statusButton = document.createElement("button");
     statusButton.type = "button";
     statusButton.className = `button${
@@ -668,8 +709,8 @@ function renderObservations(card, site, observations) {
     row.append(description, actions, commentBox);
     list.append(row);
   }
-  }
 
+  // Formulario para agregar observaciones
   const addForm = document.createElement("form");
   addForm.className = "add-observation";
 
@@ -1186,12 +1227,12 @@ async function buildReportHtml() {
     }
 
     .photo-card img {
-    display: block;
-    width: 8.8cm;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-    margin: 0 auto 0.15cm;
+      display: block;
+      width: 8.8cm;
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto 0.15cm;
     }
 
     .photo-caption {
@@ -1347,7 +1388,6 @@ async function exportPdf() {
     showMessage("No se pudo preparar el informe PDF.", true);
   }
 }
-
 function exportChecklist() {
   const visitName =
     currentVisit === "inicio" ? "Inicio de turno" : "Final de turno";
@@ -1476,6 +1516,7 @@ async function loadInicioIntoFinal() {
 }
 
 const loginForm = document.getElementById("loginForm");
+
 if (loginForm) {
   loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -1551,11 +1592,13 @@ document.querySelectorAll(".visit-tab").forEach((button) => {
 });
 
 const closeModalButton = document.getElementById("closeModal");
+
 if (closeModalButton) {
   closeModalButton.addEventListener("click", closeImage);
 }
 
 const imageModal = document.getElementById("imageModal");
+
 if (imageModal) {
   imageModal.addEventListener("click", (event) => {
     if (event.target.id === "imageModal") {
@@ -1569,6 +1612,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 const weekInput = document.getElementById("currentWeek");
+
 if (weekInput) {
   weekInput.addEventListener("change", async (event) => {
     if (!authState.canEdit) return;
@@ -1589,10 +1633,16 @@ if (weekInput) {
 }
 
 const wordButton = document.getElementById("exportWord");
-if (wordButton) wordButton.addEventListener("click", exportWord);
+
+if (wordButton) {
+  wordButton.addEventListener("click", exportWord);
+}
 
 const pdfButton = document.getElementById("exportPdf");
-if (pdfButton) pdfButton.addEventListener("click", exportPdf);
+
+if (pdfButton) {
+  pdfButton.addEventListener("click", exportPdf);
+}
 
 addChecklistButton();
 loadAuthStatus();
