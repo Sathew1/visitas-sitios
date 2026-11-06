@@ -553,34 +553,6 @@ function renderObservations(card, site, observations) {
     tracking.append(dateLabel, daysLabel);
 
     if (observation.status === "solved") {
-      const closedDateInput = document.createElement("input");
-      closedDateInput.type = "date";
-      closedDateInput.value = observation.closedAt || "";
-      closedDateInput.max = todayISO();
-      closedDateInput.disabled = !authState.canEdit;
-      closedDateInput.setAttribute("aria-label", "Fecha de cierre");
-
-      const closedDateLabel = document.createElement("label");
-      closedDateLabel.textContent = "Fecha de cierre: ";
-      closedDateLabel.append(closedDateInput);
-
-      tracking.append(closedDateLabel);
-    }
-    closedDateInput.addEventListener("change", async () => {
-      if (!authState.canEdit) return;
-
-      observation.closedAt = closedDateInput.value || null;
-
-      await saveData();
-      render();
-    });
-
-    openedDateInput.addEventListener("change", async () => {
-      if (!authState.canEdit) return;
-      observation.openedAt = openedDateInput.value;
-      await saveData();
-      render();
-    });
     const commentBox = document.createElement("textarea");
     commentBox.className = "comment-box";
     commentBox.rows = 2;
@@ -695,6 +667,7 @@ function renderObservations(card, site, observations) {
 
     row.append(description, actions, commentBox);
     list.append(row);
+  }
   }
 
   const addForm = document.createElement("form");
